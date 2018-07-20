@@ -1,10 +1,16 @@
 import React from 'react';
-import ReactDom from 'react-dom'
+import ReactDOM from 'react-dom';
 
-// Create new component. This component should create some html
-const App = function(){
-    return <div>Hi</div>;
-}
+import SearchBar from './components/search_bar.js';
 
-// Take component's html and put it on the DOM
-ReactDOM.render(App);
+const YOUTUBE_KEY = 'AIzaSyDQrm2XulJDuGuQ-jDvRnBO1hF7nKmHf5g';
+
+const App = () => {
+    return (
+        <div>
+            <searchBar />
+        </div>
+    )
+};
+
+ReactDOM.render(<App />, document.querySelector('.container'));
